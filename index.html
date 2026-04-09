@@ -1,72 +1,221 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fernando Silva</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-</head>
-<body>
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Portafolio personal de Fernando Silva, ingeniero de sistemas, con proyectos, experiencia y repositorios de GitHub."
+        />
+        <title>Carlos Fernando Escobar Silva | Ingeniero de Sistemas</title>
+        <link rel="icon" type="image/jpeg" href="img/c.jpg" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <div class="page-shell">
+            <header class="topbar">
+                <a class="brand" href="#inicio">FS</a>
+                <nav class="nav" aria-label="Secciones del portafolio">
+                    <a href="#sobre-mi" data-scroll="#sobre-mi">Sobre mí</a>
+                    <a href="#habilidades" data-scroll="#habilidades"
+                        >Habilidades</a
+                    >
+                    <a href="#repositorios" data-scroll="#repositorios"
+                        >Repositorios</a
+                    >
+                    <a href="#contacto" data-scroll="#contacto">Contacto</a>
+                </nav>
+            </header>
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Backend</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
-            </a>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-            </li>
-        </ul>
-        <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+            <main>
+                <section class="hero" id="inicio">
+                    <div class="hero__content">
+                        <span class="eyebrow"
+                            >Ingeniero de sistemas · Fullstack · Cloud · Machine
+                            Learning</span
+                        >
+                        <h1>
+                            Construyo soluciones digitales robustas, escalables
+                            y fáciles de mantener.
+                        </h1>
+                        <p class="hero__lead">
+                            Portafolio personal de Carlos Fernando Escobar
+                            Silva. Aquí encontrarás mi enfoque, mis fortalezas
+                            técnicas y una selección de repositorios públicos de
+                            GitHub.
+                        </p>
+
+                        <div class="hero__actions">
+                            <a
+                                class="button button--primary"
+                                href="#repositorios"
+                                data-scroll="#repositorios"
+                                >Ver repositorios</a
+                            >
+                            <a
+                                class="button button--secondary"
+                                href="#contacto"
+                                data-scroll="#contacto"
+                                >Contactar</a
+                            >
+                        </div>
+
+                        <div class="hero__stats">
+                            <article>
+                                <strong>+3</strong>
+                                <span
+                                    >áreas clave: backend, datos y
+                                    automatización</span
+                                >
+                            </article>
+                            <article>
+                                <strong>100%</strong>
+                                <span
+                                    >enfoque en código limpio y mantenible</span
+                                >
+                            </article>
+                            <article>
+                                <strong>24/7</strong>
+                                <span
+                                    >mentalidad de producto y mejora
+                                    continua</span
+                                >
+                            </article>
+                        </div>
+                    </div>
+
+                    <aside class="hero__card" aria-label="Resumen profesional">
+                        <div class="profile-badge">
+                            Disponible para proyectos y trabajo formal
+                        </div>
+                        <div class="profile-photo" aria-hidden="true">FS</div>
+                        <h2>Carlos Fernando Escobar Silva</h2>
+                        <p>
+                            Ingeniero de Sistemas con interés en backend,
+                            inteligencia artificial y experiencias web
+                            profesionales.
+                        </p>
+
+                        <ul class="profile-list">
+                            <li>Base sólida en desarrollo y soporte técnico</li>
+                            <li>
+                                Orientado a resolver problemas de negocio con
+                                tecnología
+                            </li>
+                            <li>
+                                Dispuesto a aprender y mejorar constantemente
+                            </li>
+                        </ul>
+                    </aside>
+                </section>
+
+                <section class="section section--grid" id="sobre-mi">
+                    <div class="section__heading">
+                        <span>Sobre mí</span>
+                        <h2>Perfil profesional</h2>
+                        <p>
+                            Me caracterizo por mi cooperación y comunicación
+                            eficientes, cumpliendo siempre los objetivos
+                            propuestos de manera oportuna. Aborda los problemas
+                            desde múltiples perspectivas y propongo soluciones
+                            que benefician a todas las partes involucradas.
+                        </p>
+                    </div>
+
+                    <div class="about-card">
+                        <p>
+                            Mi objetivo profesional es ejercer el liderazgo en
+                            el campo de la ingeniería de sistemas, destacándome
+                            entre mis pares y aportando a la innovación
+                            tecnológica y al desarrollo de soluciones
+                            vanguardistas. Aspiro a generar un impacto positivo
+                            y contribuir a construir un mundo mejor mediante la
+                            excelencia en cada proyecto en el que participo.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="section" id="habilidades">
+                    <div class="section__heading">
+                        <span>Capacidades</span>
+                        <h2>Qué puedo aportar</h2>
+                        <p>
+                            Un resumen de las habilidades en las que normalmente
+                            suelo destacar.
+                        </p>
+                    </div>
+
+                    <div class="skills-grid">
+                        <article class="skill-card">
+                            <h3>Backend y APIs</h3>
+                            <p>
+                                Diseño de servicios, lógica de negocio,
+                                integración con bases de datos y estructuras
+                                mantenibles.
+                            </p>
+                        </article>
+                        <article class="skill-card">
+                            <h3>Frontend corporativo</h3>
+                            <p>
+                                Interfaces limpias, responsivas y alineadas con
+                                objetivos profesionales y de marca personal.
+                            </p>
+                        </article>
+                        <article class="skill-card">
+                            <h3>Git y despliegue</h3>
+                            <p>
+                                Flujos de trabajo con git, documentación clara
+                                (swagger) y manejo de repositorios (GitHub o
+                                Microsoft Azure DevOps).
+                            </p>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="section repos-section" id="repositorios">
+                    <div class="section__heading section__heading--inline">
+                        <div>
+                            <span>GitHub</span>
+                            <h2>Repositorios destacados</h2>
+                        </div>
+                        <p data-repositories-status>Cargando repositorios...</p>
+                    </div>
+
+                    <div class="repos-grid" data-repositories></div>
+                </section>
+
+                <section class="section contact-section" id="contacto">
+                    <div class="contact-card">
+                        <div>
+                            <span>Contacto</span>
+                            <h2>Construyamos algo profesional.</h2>
+                            <p>Correo: cfes2004@gmail.com</p>
+                            <p>Número: (+57) 316 6071650</p>
+                            <p>LinkedIn: linkedin.com/in/cfes2004/</p>
+                        </div>
+                        <a
+                            class="button button--primary"
+                            href="https://wa.me/573166071650?text=Hola%20Carlos%2C%20quiero%20contactarte%20desde%20tu%20portafolio."
+                            target="_blank"
+                            rel="noreferrer"
+                            >Escríbeme</a
+                        >
+                    </div>
+                </section>
+            </main>
+
+            <footer class="footer">
+                <p>Carlos Fernando Escobar Silva · Ingeniero de Sistemas</p>
+                <p>Todos los derechos reservados · <span data-year></span></p>
+            </footer>
         </div>
-    </div>
-    </nav>
 
-    <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
-    <div class="row">
-        <div class="col-12">
-            <h1 class="mi-hermosa-clase">Mi presentación</h1>
-            <div class="card text-center">
-                <div class="card-body">
-                    <img width="220" height="200" src="https://www.cabq.gov/artsculture/biopark/news/10-cool-facts-about-penguins/@@images/1a36b305-412d-405e-a38b-0947ce6709ba.jpeg" class="rounded-circle mb-3">
-                    <p>Fernando Silva<br>
-                        Ingeniero de Sistemas<br>
-                        Estudiante desde el 2021<br>
-                        Me gusta el fútbol, los videojuegos y la programación back-end
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-    
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</body>
+        <script src="js/main.js"></script>
+    </body>
 </html>
