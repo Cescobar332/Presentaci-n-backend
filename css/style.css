@@ -8,7 +8,32 @@
     --muted: #a8b4c9;
     --accent: #58d6c1;
     --accent-strong: #f5a524;
+    --bg-start: #06101c;
+    --bg-mid: #08131f;
+    --bg-end: #0d1726;
+    --bg-bloom-left: rgba(88, 214, 193, 0.18);
+    --bg-bloom-right: rgba(245, 165, 36, 0.16);
+    --grid-line: rgba(255, 255, 255, 0.03);
     --shadow: 0 24px 80px rgba(0, 0, 0, 0.3);
+}
+
+html[data-theme="light"] {
+    --bg: #f4f7fb;
+    --bg-elevated: rgba(255, 255, 255, 0.84);
+    --surface: rgba(255, 255, 255, 0.95);
+    --surface-soft: rgba(0, 0, 0, 0.03);
+    --line: rgba(22, 30, 44, 0.12);
+    --text: #112033;
+    --muted: #506074;
+    --accent: #0ea88f;
+    --accent-strong: #c27813;
+    --bg-start: #e8f1ff;
+    --bg-mid: #eff6ff;
+    --bg-end: #f9fbff;
+    --bg-bloom-left: rgba(14, 168, 143, 0.12);
+    --bg-bloom-right: rgba(194, 120, 19, 0.12);
+    --grid-line: rgba(10, 20, 40, 0.04);
+    --shadow: 0 22px 70px rgba(12, 28, 53, 0.12);
 }
 
 * {
@@ -26,15 +51,20 @@ body {
     background:
         radial-gradient(
             circle at top left,
-            rgba(88, 214, 193, 0.18),
+            var(--bg-bloom-left),
             transparent 26%
         ),
         radial-gradient(
             circle at top right,
-            rgba(245, 165, 36, 0.16),
+            var(--bg-bloom-right),
             transparent 24%
         ),
-        linear-gradient(160deg, #06101c 0%, #08131f 45%, #0d1726 100%);
+        linear-gradient(
+            160deg,
+            var(--bg-start) 0%,
+            var(--bg-mid) 45%,
+            var(--bg-end) 100%
+        );
     min-height: 100vh;
 }
 
@@ -43,8 +73,8 @@ body::before {
     position: fixed;
     inset: 0;
     background-image:
-        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        linear-gradient(var(--grid-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
     background-size: 72px 72px;
     mask-image: radial-gradient(circle at center, black 45%, transparent 100%);
     pointer-events: none;
@@ -68,8 +98,48 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     gap: 24px;
     padding: 8px 0 28px;
+}
+
+.topbar__controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-left: auto;
+}
+
+.control-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    color: var(--muted);
+    font-size: 0.82rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.control-field select {
+    min-width: 132px;
+    min-height: 42px;
+    border-radius: 12px;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    color: var(--text);
+    font: inherit;
+    text-transform: none;
+    padding: 0 12px;
+    outline: none;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.control-field select:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(88, 214, 193, 0.2);
 }
 
 .brand {
@@ -475,6 +545,17 @@ a {
     .topbar {
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    .topbar__controls {
+        width: 100%;
+        margin-left: 0;
+        justify-content: flex-start;
+    }
+
+    .control-field {
+        width: 100%;
+        max-width: 220px;
     }
 
     .nav {
